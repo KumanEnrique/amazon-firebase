@@ -21,7 +21,7 @@ db.collection("amazon").doc("libros").collection("nada1").doc("texto").collectio
     querySnapshot.forEach(doc=>{
         ver(doc,fragmento2)
     })
-    contenedorCelulares.appendChild(fragmento2)
+    contenedorTexto.appendChild(fragmento2)
 })
 
 function ver(doc,fragmentoContenedor){
