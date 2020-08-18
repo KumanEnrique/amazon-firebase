@@ -1,9 +1,9 @@
 const contenedorInfantiles = document.getElementById("contenedor-infantiles")
 const contenedorSuspenso = document.getElementById("contenedor-suspenso")
-// const contenedorCelulares = document.getElementById("contenedor-celulares")
+const contenedorTexto = document.getElementById("contenedor-texto")
 const fragmento = document.createDocumentFragment()
 const fragmento1 = document.createDocumentFragment()
-// const fragmento2 = document.createDocumentFragment()
+const fragmento2 = document.createDocumentFragment()
 
 db.collection("amazon").doc("libros").collection("nada1").doc("infantiles").collection("nada2").get().then((querySnapshot)=>{
     querySnapshot.forEach(doc=>{
@@ -17,12 +17,12 @@ db.collection("amazon").doc("libros").collection("nada1").doc("suspenso").collec
     })
     contenedorSuspenso.appendChild(fragmento1)
 })
-/* db.collection("amazon").doc("electronicos").collection("nada1").doc("celulares").collection("nada2").get().then((querySnapshot)=>{
+db.collection("amazon").doc("libros").collection("nada1").doc("texto").collection("nada2").get().then((querySnapshot)=>{
     querySnapshot.forEach(doc=>{
         ver(doc,fragmento2)
     })
     contenedorCelulares.appendChild(fragmento2)
-}) */
+})
 
 function ver(doc,fragmentoContenedor){
     const {articulo, desc, imgSRC, amazonLink} = doc.data()
