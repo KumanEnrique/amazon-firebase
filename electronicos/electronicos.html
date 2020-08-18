@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.3.1/sketchy/bootstrap.min.css">
+    <title>Electronicos</title>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="../principal/principal.html">deCompras</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="electronicos.html" target="_blank">Electrónicos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../salud/salud.html" target="_blank">Salud</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../niños/niños.html" target="_blank" >Niños</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../libros/libros.html" target="_blank">Libros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../moda/moda.html" target="_blank">Moda</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="row">
+            <ul class="nav nav-tabs ml-4" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="computadoras-tab" data-toggle="tab" href="#computadoras" role="tab" aria-controls="computadoras"
+                        aria-selected="true">Computadoras</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="audifonos-tab" data-toggle="tab" href="#audifonos" role="tab" aria-controls="audifonos"
+                        aria-selected="false">Audifonos</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="celulares-tab" data-toggle="tab" href="#celulares" role="tab" aria-controls="celulares"
+                        aria-selected="false">Celulares</a>
+                </li>
+            </ul>
+        </div>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="computadoras" role="tabpanel" aria-labelledby="computadoras-tab">
+                    <div class="row" id="contenedor-computadoras">
+                        <!-- <div class="col-lg-6 col-md-6 col-xs-12 my-3">
+                            <div class="card">
+                                <div class="card-header">${articulo}</div>
+                                <div class="card-body">
+                                    <img src="${imgSRC}" class="img-thumbnail" alt="${articulo}">
+                                    <div class="accordion" id="accordion${doc.id}">
+                                        <div class="card">
+                                            <div class="card-header" id="heading${doc.id}">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                                                        data-target="#${doc.id}" aria-expanded="true" aria-controls="${doc.id}">
+                                                        descripcion
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="${doc.id}" class="collapse" aria-labelledby="heading${doc.id}" data-parent="#accordion${doc.id}">
+                                                <div class="card-body">
+                                                    ${desc}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="card-footer">
+                                    <a href="${amazonLink}" class="btn btn-warning btn-lg btn-block" role="button" target="_blank">ir a comprar</a>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="audifonos" role="tabpanel" aria-labelledby="audifonos-tab">
+                    <div class="row" id="contenedor-audifonos"></div>
+                </div>
+                <div class="tab-pane fade" id="celulares" role="tabpanel" aria-labelledby="celulares-tab">
+                    <div class="row" id="contenedor-celulares"></div>
+                </div>
+            </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <!-- The core Firebase JS SDK is always req>uired and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+             https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBdgI0YRS7XeF5wlxnBC5LDubGnvqFe4G4",
+            authDomain: "inventario-29f5c.firebaseapp.com",
+            databaseURL: "https://inventario-29f5c.firebaseio.com",
+            projectId: "inventario-29f5c",
+            storageBucket: "inventario-29f5c.appspot.com",
+            messagingSenderId: "261139110928",
+            appId: "1:261139110928:web:0a64e6db804f3809003e95",
+            measurementId: "G-7JEH6SWHMY"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const db = firebase.firestore();
+    </script>
+    <script src="electronicos.js"></script>
+</body>
+</html>

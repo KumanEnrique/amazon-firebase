@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.3.1/sketchy/bootstrap.min.css">
+    <title>Salud</title>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="../principal/principal.html">deCompras</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../electronicos/electronicos.html" target="_blank">Electrónicos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="salud.html" target="_blank">Salud</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../niños/niños.html" target="_blank">Niños</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../libros/libros.html" target="_blank">Libros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../moda/moda.html" target="_blank">Moda</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="row">
+            <ul class="nav nav-tabs ml-4" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="dispositivos-tab" data-toggle="tab" href="#dispositivos" role="tab" aria-controls="dispositivos"
+                        aria-selected="true">Dispositivos</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="cuidadoP-tab" data-toggle="tab" href="#cuidadoP" role="tab" aria-controls="cuidadoP"
+                        aria-selected="false">Cuidado personal</a>
+                </li>
+                <!-- <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="celulares-tab" data-toggle="tab" href="#celulares" role="tab" aria-controls="celulares"
+                        aria-selected="false">Celulares</a>
+                </li> -->
+            </ul>
+        </div>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="dispositivos" role="tabpanel" aria-labelledby="dispositivos-tab">
+                    <div class="row" id="contenedor-dispositivos">
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="cuidadoP" role="tabpanel" aria-labelledby="cuidadoP-tab">
+                    <div class="row" id="contenedor-cuidadoP"></div>
+                </div>
+                <!-- <div class="tab-pane fade" id="celulares" role="tabpanel" aria-labelledby="celulares-tab">
+                    <div class="row" id="contenedor-celulares"></div>
+                </div> -->
+            </div>
+
+        <div class="row" id="contenedor">
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <!-- The core Firebase JS SDK is always req>uired and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+             https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBdgI0YRS7XeF5wlxnBC5LDubGnvqFe4G4",
+            authDomain: "inventario-29f5c.firebaseapp.com",
+            databaseURL: "https://inventario-29f5c.firebaseio.com",
+            projectId: "inventario-29f5c",
+            storageBucket: "inventario-29f5c.appspot.com",
+            messagingSenderId: "261139110928",
+            appId: "1:261139110928:web:0a64e6db804f3809003e95",
+            measurementId: "G-7JEH6SWHMY"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const db = firebase.firestore();
+    </script>
+    <script src="salud.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.3.1/sketchy/bootstrap.min.css">
+    <title>amazon</title>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Amazon</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="electronicos/electronicos.html" target="_blank" >Electronicos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="salud/salud.html" target="_blank">Salud</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="niños/niños.html" target="_blank" >Niños</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="libros/libros.html" target="_blank">Libros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="moda/moda.html" target="_blank">Moda</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#iniciarSesionModal" id="navSesion">Iniciar sesión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="cerrarSesion">Cerrar sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="alert alert-warning my-2" role="alert">
+            Tienes que registrarte para agregar
+          </div>
+        <div class="row my-3" id="fila1">
+            <div class="col">
+                <form id="principal">
+                    <div class="form-group">
+                        <label for="nombreArticulo">Articulo</label>
+                        <input type="text" required placeholder="coloca tu articulo" autofocus class="form-control" id="nombreArticulo">
+                    </div>
+                    <div class="form-grop">
+                        <label for="descripcion">descripcion</label>
+                        <input type="text" required id="descripcion" placeholder="coloca tu descripcion" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="imagenSRC">Dirección de la imagen</label>
+                        <input type="text" required id="imagenSRC" placeholder="ejemplo: https://lorempixel.com/200/200" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="enlace">Enlace a amazon</label>
+                        <input type="text" required id="enlace" placeholder="coloca tu enlace a amazon (acortada o completa)" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="categoria">Categoria</label>
+                        <select id="categoria" required class="form-control"></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="subcategoria">Subcategoria</label>
+                        <select id="subcategoria" required class="form-control"></select>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Agregar</button>
+                </form>
+            </div>
+        </div>
+        <div class="row" id="contenedor">
+            <!--  -->
+            <!-- <form action="">
+                <div class="form-group">
+                    <label for="onomatopeya">selecciona una categoria</label>
+                    <select name="" id="onomatopeya">
+                        <option value="electronicos">electronicos</option>
+                        <option value="salud">salud</option>
+                        <option value="libros">libros</option>
+                        <option value="niños">ninos</option>
+                        <option value="faddd">faddd</option>
+                    </select>|
+                </div>
+            </form>
+            <div class="form-group">
+                <label for="">seciona una subcategoria</label>
+                <select name="" id="salsa" class="form-control">
+                </select>
+            </div> -->
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="iniciarSesionModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Iniciar sesíon</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="fIniciarSesion">
+                        <div class="form-group">
+                            <label for="iCorreo">Correo</label>
+                            <input type="text" id="iCorreo" placeholder="Coloca tu correo" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="iContraseña">Contraseña</label>
+                            <input type="text" id="iContraseña" placeholder="Coloca tu contraseña" class="form-control">
+                        </div>
+                        <button class="btn btn-primary" type="submit">Iniciar sesión</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- fin Modal -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <!-- The core Firebase JS SDK is always req>uired and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+             https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
+    
+    <script src="index.js" type="module"></script>
+</body>
+</html>
