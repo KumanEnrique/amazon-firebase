@@ -1,11 +1,12 @@
 import {db,auth} from './confi.js'
 export let uid;
-const fila1 = document.getElementById("fila1")
+const fila1 = document.getElementById("fila1") //formulario
 const formularioIniciar = document.getElementById("fIniciarSesion")
 const iCorreo = document.getElementById("iCorreo")
 const iContraseña = document.getElementById("iContraseña")
-const btnIniciar = document.getElementById("navSesion")
+const btniniciarSesion = document.getElementById("navSesion")
 const btnCerrarSesion = document.getElementById("cerrarSesion")
+
 //evento para ver si estas en sesión
 auth.onAuthStateChanged((user)=>{
     if(user){
@@ -18,6 +19,8 @@ auth.onAuthStateChanged((user)=>{
         uid = user.uid
     }else {
         console.log("sesion cerrada")
+        btnCerrarSesion.style.display = "none"
+        btniniciarSesion.style.display = "block"
     }
 });
 formularioIniciar.addEventListener("submit",(e)=>{
@@ -30,6 +33,8 @@ formularioIniciar.addEventListener("submit",(e)=>{
             console.log(correo,contraseña);
             formularioIniciar.reset();
             $("#iniciarSesionModal").modal("hide")
+            btnCerrarSesion.style.display = "block"
+            btniniciarSesion.style.display = "none"
         })
         .catch((e) => {
             const error = e.code;
