@@ -11,6 +11,8 @@ const btnCerrarSesion = document.getElementById("cerrarSesion")
 auth.onAuthStateChanged((user)=>{
     if(user){
         console.log("sesion iniciada,objeto user: ", user)
+        btnCerrarSesion.style.display = "block"
+        btniniciarSesion.style.display = "none"
         db.collection("amazon").get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 // console.log("subcoleción",doc.id);
