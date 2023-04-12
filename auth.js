@@ -1,7 +1,9 @@
 import {db,auth} from './confi.js'
 export let uid;
+
 const fila1 = document.getElementById("fila1") //formulario
 const formularioIniciar = document.getElementById("fIniciarSesion")
+const authGoogle = document.getElementById("authGoogle")
 const iCorreo = document.getElementById("iCorreo")
 const iContraseña = document.getElementById("iContraseña")
 const btniniciarSesion = document.getElementById("navSesion")
@@ -51,6 +53,9 @@ btnCerrarSesion.addEventListener("click",()=>{
     .catch((e)=>{
         console.warn("hubo un error",e)
     })
+})
+authGoogle.addEventListener("click",()=>{
+    loginGoogle()
 })
 /* 
 formularioRegistrar.addEventListener("submit",(e)=>{
